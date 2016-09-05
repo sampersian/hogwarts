@@ -1,8 +1,45 @@
+html {
+  background-image: url('../images/hogwarts.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+
 body {
   padding: 50px;
+  background: none;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+main {
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  padding: 30px;
+}
+
+.myNavList {
+  background-color: rgba(0,0,0,0.2);
+  color: #a28800;
+  padding: 10px;
+}
+
+.searchButton {
+  background-color: rgba(0,0,0,0.6);
+  color: white;
 }
 
 a {
   color: #00B7FF;
+}
+
+.searchForm {
+  float: right;
+}
+
+.description {
+  color: blue;
+}
+
+.apiSectionHeader {
+  color: gold;
 }

@@ -1,13 +1,49 @@
-<h1>Hogwarts API</h1>
-<p>Here are all API routes:</p>
-<ul>
-  <li>/api/houses</li>
-  <li>/api/students</li>
-  <li>/api/students/<i>student name</i></li>
-  <li>/api/classes</li>
-  <li>/api/professors</li>
-  <li>/api/subjects</li>
-  <li>/api/parents</li>
-  <li>/api/parents_students</li>
-  <li>/api/enrollments</li>
-</ul>
+<main>
+  <h1>Hogwarts API</h1>
+  <select class="apiSectionSelect form-control">
+    <option value="studentInfo">Student Information</option>
+    <option value="houseInfo">House Information</option>
+    <option value="classInfo">Class Information</option>
+    <option value="professorInfo">Professor Information</option>
+  </select>
+  <div class="apiSectionGroup">
+    <div class="apiSection studentInfo">
+      <h5 class="apiSectionHeader">Student Information</h5>
+      <ul>
+        <li>/api/students -> all student information</li>
+        <li>/api/students/<i>student name</i> -> specific student information</li>
+        <li>/api/students/<i>student name</i>/parents -> parent info about a specific student</li>
+        <li>/api/students/<i>student name</i>/classes -> class info about a specific student</li>
+      </ul>
+    </div>
+    <div class="apiSection studentInfo">
+      <h5 class="apiSectionHeader">Student Parent Information</h5>
+      <ul>
+        <li>/api/parents -> all parent information</li>
+        <li>/api/parents_students -> all parent-student relationships</li>
+      </ul>
+    </div>
+    <div class="apiSection houseInfo" hidden>
+      <h5 class="apiSectionHeader">House Information</h5>
+      <ul>
+        <li>/api/houses -> all house information</li>
+      </ul>
+    </div>
+    <div class="apiSection classInfo" hidden>
+      <h5 class="apiSectionHeader">Class Information</h5>
+      <ul>
+        <li>/api/classes/all -> all class information</li>
+        <li>/api/classes -> all class information *only classes with professors and subject that != null</li>
+        <li>/api/classes/<i>professor name</i> -> all classes taught by a professor</li>
+        <li>/api/subjects -> all class subjects information</li>
+        <li>/api/enrollments -> all student-class enrollment information</li>
+      </ul>
+    </div>
+    <div class="apiSection professorInfo" hidden>
+      <h5 class="apiSectionHeader">Professor Information</h5>
+      <ul>
+        <li>/api/professors -> all professor information</li>
+      </ul>
+    </div>
+  </div>
+</main>
