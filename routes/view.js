@@ -1,10 +1,18 @@
 var express = require('express');
 var router = express.Router();
-var query = require('../db/query')
+var query = require('../db/query');
+var bcrypt = require('bcrypt');
+var salt = bcrypt.genSaltSync(10);
 
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  var before = "password";
+  var hash = bcrypt.hashSync(before, salt);
+  console.log(bcrypt.compareSync("password", hash));
+  console.log(hash);
+  console.log(salt);
+  console.log("hello")
   res.render('index');
 });
 
